@@ -95,7 +95,7 @@ func (u *User) FindFile(key []byte) (int64, io.Reader, error) {
 // This is called when the peer gets a file
 // that was queried for.. The file data can
 // be read from the io.Reader (e.g. TCP conn)
-// This method is minimal since an appementation
+// This method is minimal since an application
 // will make decisions about handling the file data
 func (u *User) HandleFile(err error, filesize int64, key []byte, r io.Reader) {
 	fileOutput := NewFileOutput(err, filesize, key, r)
